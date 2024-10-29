@@ -1,6 +1,6 @@
 import "./App.css";
 import { Gallery } from "./Views/Gallery";
-import { VeltProvider } from "@veltdev/react";
+import { VeltComments, VeltCommentsSidebar, VeltProvider } from "@veltdev/react";
 
 
 function App() {
@@ -8,6 +8,8 @@ function App() {
     <div className="App">
       <VeltProvider apiKey="fh9i0P17s87fvZNBcjql">
         <Gallery />
+        <VeltComments />
+        <VeltCommentsSidebar />
       </VeltProvider>
     </div>
   );

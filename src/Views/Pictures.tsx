@@ -1,25 +1,18 @@
-import { useVeltClient, VeltCommentTool } from "@veltdev/react";
-import logo from "../logo.svg";
-import { useEffect } from "react";
+import { useSetDocument } from "@veltdev/react";
 
 export const Pictures = () => {
-  const { client } = useVeltClient();
-
-  useEffect(() => {
-    if (client) {
-      client.setDocumentId("fcb");
-    }
-  }, [client]);
+  useSetDocument("spotify_barca");
 
   return (
-    <div id="fcb">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <VeltCommentTool />
-      </header>
+    <div id="pictures">
+      <div className="App-header">
+        <p>Welcome to camp nou</p>
+        <img
+          src="https://www.fcbarcelona.com/photo-resources/2020/02/24/3f1215ed-07e8-47ef-b2c7-8a519f65b9cd/mini_UP3_20200105_FCB_VIS_View_1a_Empty.jpg?width=1200&height=750"
+          className="hero_image"
+          alt="fcb ground"
+        />
+      </div>
     </div>
   );
 };
